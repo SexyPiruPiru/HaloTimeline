@@ -156,3 +156,60 @@
   border: 1px solid #fff;
   background: #fff;
 }
+
+@media (max-width: 900px) {
+  .timeline-container {
+    max-width: 100vw;
+    padding: 1rem 0.5rem;
+  }
+  .timeline-scroll {
+    width: 98vw;
+    max-width: 98vw;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+  .timeline-event {
+    min-width: 180px;
+    padding: 1rem 0.5rem;
+    font-size: 0.95rem;
+  }
+  .lang-selector {
+    top: 12px;
+    left: 12px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-container {
+    padding: 0.5rem 0.2rem;
+  }
+  .timeline-scroll {
+    width: 100vw;
+    max-width: 100vw;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .timeline-event {
+    min-width: 140px;
+    padding: 0.5rem 0.2rem;
+    font-size: 0.85rem;
+  }
+  .lang-selector {
+    top: 6px;
+    left: 6px;
+  }
+  .lang-flag {
+    width: 28px;
+    height: 18px;
+  }
+  .lang-flag-small {
+    width: 18px;
+    height: 12px;
+  }
+  h1 {
+    font-size: 1.3em;
+  }
+}
