@@ -7,38 +7,6 @@ const resources = {
       title: 'Halo Timeline',
       events: [
         {
-          year: '2525',
-          date: '01/03/2525',
-          title: 'Primo contatto Covenant',
-          description: 'L’umanità incontra i Covenant per la prima volta.',
-          media: 'game',
-          workTags: ['Halo: Combat Evolved']
-        },
-        {
-          year: '2552',
-          date: '30/08/2552',
-          title: 'Battaglia di Reach',
-          description: 'Uno degli eventi più importanti della guerra contro i Covenant.',
-          media: 'game',
-          workTags: ['Halo: Reach', 'Halo: The Fall of Reach']
-        },
-        {
-          year: '2557',
-          date: '06/11/2557',
-          title: 'Halo 4',
-          description: 'Master Chief si risveglia e affronta una nuova minaccia.',
-          media: 'game',
-          workTags: ['Halo 4']
-        },
-        {
-          year: '2557',
-          date: '07/11/2557',
-          title: 'Halo 5',
-          description: 'Master Chief affronta nuove sfide e minacce.',
-          media: 'game',
-          workTags: ['Halo 5: Guardians']
-        },
-        {
           year: '2552',
           date: '19/09/2552',
           title: 'Gli umani scoprono Halo',
@@ -62,6 +30,42 @@ const resources = {
           media: 'book',
           workTags: ['Halo: First Strike']
         },
+        {
+          year: '2552',
+          date: '26/08/2552',
+          title: 'Alcuni Spartan si recano su Reach',
+          description: 'La Squadra Rossa capitanata da Fred-104 si dirige su Reach in difesa dei cannoni Super MAC.',
+          media: 'book',
+          workTags: ['Halo: First Strike'],
+          time: '06:22',
+        },
+        {
+          year: '2552',
+          date: '24/07/2552',
+          title: 'I Covenant attaccano Reach',
+          description: 'La Squadra Noble va ad indagare circa un ripetitore per comunicazioni disattivato. Scoprono una squadra Covenant sulla superfice.',
+          media: 'game',
+          workTags: ['Halo Reach'],
+          time: '07:28',
+        },
+        {
+          year: '2552',
+          date: '26/07/2552',
+          title: 'La Squadra Noble viene inviata alla Sword Base',
+          description: 'La Dottoressa Halsey informa gli Spartan che i Covenant sono a caccia di un manufatto religioso recentemente scoperto nel sottosuolo.',
+          media: 'game',
+          workTags: ['Halo Reach'],
+          time: '11:26',
+        },
+        {
+          year: '2552',
+          date: '12/08/2552',
+          title: "Parte la controffensiva dell'UNSC",
+          description: "Dopo una missione di ricognizione, l'UNSC attacca i Covenant ma le forze nemiche sono in gran numero.",
+          media: 'game',
+          workTags: ['Halo Reach'],
+          time: '08:00',
+        },
       ]
     }
   },
@@ -70,45 +74,65 @@ const resources = {
       title: 'Halo Timeline',
       events: [
         {
-          year: '2525',
-          date: '03/01/2525',
-          title: 'First Contact with the Covenant',
-          description: 'Humanity encounters the Covenant for the first time.',
+          year: '2552',
+          date: '09/19/2552',
+          title: 'Humans discover Halo',
+          description: "The Pillar of Autumn exits slipspace near Installation 04.",
           media: 'game',
           workTags: ['Halo: Combat Evolved']
         },
         {
           year: '2552',
-          date: '08/30/2552',
-          title: 'Battle of Reach',
-          description: 'One of the most important events in the war against the Covenant.',
+          date: '09/22/2552',
+          title: 'Destruction of Halo',
+          description: 'Master Chief destroys Installation 04 to stop the Flood and escapes with a Longsword fighter.',
           media: 'game',
-          workTags: ['Halo: Reach', 'Halo: The Fall of Reach']
+          workTags: ['Halo: Combat Evolved']
         },
         {
-          year: '2557',
-          date: '11/06/2557',
-          title: 'Halo 4',
-          description: 'Master Chief awakens and faces a new threat.',
-          media: 'game',
-          workTags: ['Halo 4']
-        },
-        {
-          year: '2557',
-          date: '11/07/2557',
-          title: 'Halo 5',
-          description: 'Master Chief faces new challenges and threats.',
-          media: 'game',
-          workTags: ['Halo 5: Guardians']
-        },
-        {
-          year: '2553',
-          date: '03/15/2553',
-          title: 'The Fall of Reach',
-          description: 'Told in the novel "Halo: The Fall of Reach".',
+          year: '2552',
+          date: '09/22/2552',
+          title: 'Master Chief finds survivors and escapes',
+          description: 'Master Chief finds Johnson, they steal a Covenant ship and head to Reach.',
           media: 'book',
-          workTags: ['Halo: The Fall of Reach', 'Halo: Reach']
-        }
+          workTags: ['Halo: First Strike']
+        },
+        {
+          year: '2552',
+          date: '08/26/2552',
+          title: 'Some Spartans go to Reach',
+          description: 'Red Team led by Fred-104 heads to Reach to defend the Super MAC guns.',
+          media: 'book',
+          workTags: ['Halo: First Strike'],
+          time: '06:22',
+        },
+        {
+          year: '2552',
+          date: '07/24/2552',
+          title: 'The Covenant attack Reach',
+          description: 'Noble Team investigates a disabled communications relay. They discover a Covenant squad on the surface.',
+          media: 'game',
+          workTags: ['Halo: Reach'],
+          time: '07:28',
+        },
+        {
+          year: '2552',
+          date: '07/26/2552',
+          title: 'Noble Team is sent to Sword Base',
+          description: 'Dr. Halsey informs the Spartans that the Covenant are hunting a recently discovered religious artifact underground.',
+          media: 'game',
+          workTags: ['Halo: Reach'],
+          time: '11:26',
+        },
+        {
+          year: '2552',
+          date: '08/12/2552',
+          title: 'The UNSC launches a counteroffensive',
+          description: 'After a reconnaissance mission, the UNSC attacks the Covenant but enemy forces are numerous.',
+          media: 'game',
+          workTags: ['Halo: Reach'],
+          time: '08:00',
+        },
       ]
     }
   }

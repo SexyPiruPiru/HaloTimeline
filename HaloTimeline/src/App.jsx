@@ -28,17 +28,15 @@ function App() {
     setShowLangMenu(false);
   };
 
-  // Ordina gli eventi per data (formato DD/MM/YYYY o MM/DD/YYYY)
+  // Ordina gli eventi per data (formato DD/MM/YYYY per IT, MM/DD/YYYY per EN)
   function parseDate(dateStr) {
-    // Supporta sia formato italiano che inglese
     const parts = dateStr.split('/');
-    if (parts[2].length === 4) {
-      // DD/MM/YYYY o MM/DD/YYYY
-      // Se il giorno > 12, sicuramente è DD/MM/YYYY
-      if (parseInt(parts[0], 10) > 12) {
+    if (parts.length === 3) {
+      if (currentLang === 'it') {
+        // DD/MM/YYYY
         return new Date(parts[2], parts[1] - 1, parts[0]);
       } else {
-        // fallback: MM/DD/YYYY
+        // EN: MM/DD/YYYY
         return new Date(parts[2], parts[0] - 1, parts[1]);
       }
     }
@@ -181,6 +179,11 @@ function App() {
           </div>
         )}
       </div>
+      <div className="media-type-legend media-type-legend--left">
+        <span className="media-type-legend-label" style={{ color: mediaTypeColors.game }}>Videogiochi</span>
+        <span className="media-type-legend-label" style={{ color: mediaTypeColors.book }}>Libri</span>
+        <span className="media-type-legend-label" style={{ color: mediaTypeColors.comic }}>Fumetti</span>
+      </div>
       <div className="media-legend-toggle" onClick={() => setShowLegend(v => !v)}>
         Opere
         {showLegend && (
@@ -268,7 +271,9 @@ function App() {
               </div>
               <div className="event-year" style={{ color: '#fff' }}>{event.year}</div>
               <div className="event-date">
-                {event.date.slice(0, 5)}
+                {event.date.slice(0, 5)}{event.time && (
+                  <span className="event-time">&nbsp;&nbsp;&nbsp;H {event.time}</span>
+                )}
               </div>
               {/* Tag opera in basso a destra */}
               <div className="event-media-tags">
@@ -309,11 +314,6 @@ function App() {
           Mostra tutti gli eventi
         </button>
       )}
-      <div className="media-type-legend">
-        <span className="media-type-legend-label" style={{ color: mediaTypeColors.game }}>Videogiochi</span>
-        <span className="media-type-legend-label" style={{ color: mediaTypeColors.book }}>Libri</span>
-        <span className="media-type-legend-label" style={{ color: mediaTypeColors.comic }}>Fumetti</span>
-      </div>
     </div>
   );
 }
